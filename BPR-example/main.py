@@ -59,7 +59,7 @@ from libsmop import *
     if tetr_split == 1:
         Rall=sparse(R_idx(arange(),1),R_idx(arange(),2),1)
 # main.m:37
-        idx_te=zeros(N,1)
+        idx_te=zeros(N,1) #junita: I think sparse is a matlab function
 # main.m:38
         # per source
         for i in arange(1,N).reshape(-1):
