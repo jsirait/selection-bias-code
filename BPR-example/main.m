@@ -48,11 +48,11 @@ if tetr_split == 1 % Leave one out test-train split
     % Test
     test_mask         = zeros(length(R_idx), 1);
     test_mask(idx_te) = 1;
-    test_mask         = logical(test_mask);
+    test_mask         = logical(test_mask); % ====================================================
     % Train
-    train_mask = ~test_mask;
+    train_mask = ~test_mask; % ==================================================
 
-    R_idx_tr = R_idx(train_mask, :);
+    R_idx_tr = R_idx(train_mask, :); % =================================================
     R_idx_te = R_idx(test_mask , :);
 
     Rtr  = sparse(R_idx_tr(:,1), R_idx_tr(:,2), 1, N, M);
