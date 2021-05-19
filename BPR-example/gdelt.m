@@ -1,4 +1,5 @@
 function [ R_idx, M, N, names, ids ] = gdelt(path,subset_size, reload)
+ % the things inside the square brackets are the returned entity
     if reload == 1
         % Get data
         data = csvread(path,1,0);
